@@ -11,9 +11,9 @@ public class AcceptanceTest {
                                 ". .R. .\n" +
                                 ". . . .";
 
-        Mars mars = new Mars("   \n" +
-                                   "   \n" +
-                                   "   ");
+        Mars mars = Mars.fromString(". . . .\n" +
+                                    ". . . .\n" +
+                                    ". . . .");
 
         Coordinate landingCoordinate = new Coordinate(1,1);
         Rover rover = new Rover(landingCoordinate);
