@@ -8,15 +8,15 @@ public class AcceptanceTest {
     @Test
     public void marsRoverLandsOnMars() {
         String expectedMars =   ". . . .\n" +
-                                ". .R. .\n" +
-                                ". . . .";
+                                ". . . .\n" +
+                                ". .R. .";
 
         Mars mars = Mars.fromString(". . . .\n" +
                                     ". . . .\n" +
                                     ". . . .");
 
-        Coordinate landingCoordinate = new Coordinate(1,1);
-        Rover rover = new Rover(landingCoordinate);
+        Coordinates landingCoordinates = new Coordinates(1,2);
+        Rover rover = new Rover(landingCoordinates);
         mars.land(rover);
         String actualMars = mars.display();
 

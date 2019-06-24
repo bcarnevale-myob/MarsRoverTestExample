@@ -26,6 +26,8 @@ public class Mars {
     }
 
     public void land(Rover rover) {
+        Coordinates coordinates = rover.getCurrentCoordinates();
+        map.get(coordinates.getY()).set(coordinates.getX(), "R");
     }
 
     public String display() {

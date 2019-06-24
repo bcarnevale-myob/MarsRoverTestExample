@@ -1,7 +1,16 @@
 package com.company;
 
 public class Rover {
-    public Rover(Coordinate landingCoordinate) {
 
+    private Coordinates currentCoordinates;
+
+    public Rover(Coordinates landingCoordinates) {
+
+        this.currentCoordinates = new Coordinates(landingCoordinates);
+
+    }
+
+    public Coordinates getCurrentCoordinates() {
+        return new Coordinates(this.currentCoordinates);
     }
 }
